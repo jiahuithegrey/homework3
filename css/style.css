@@ -1,0 +1,47 @@
+body{
+    background-color: #f9fbfd;
+    margin: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 36px;
+}
+h2{
+    padding: 20px 0;
+    font-size: 28px;
+}
+#bodyBox{
+    margin: 40px 10px 10px 10px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+form{
+    border-top: 1px #c0c7cf solid;
+    border-bottom: 1px #c0c7cf solid;
+    margin-bottom: 10px;
+}
+input{
+    border: 1px dashed #c0c7cf;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+#generateBtn{
+    color: #fff;
+    background-color: #af0808;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#copyBtn{
+    color: #fff;
+    background-color: #c0c7cf;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
