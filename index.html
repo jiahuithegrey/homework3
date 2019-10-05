@@ -16,21 +16,20 @@
     />
   </head>
   <body>
-    <script src="./script.js"></script>
     <h1>Password Generator</h1>
     <div id="bodyBox">
         <h2>Generate a Password</h2> 
         <form>
-            <input type="text" placeholder = "Your Secure Password">
+            <input id="display" type="text" placeholder = "Your Secure Password">
         </form>
         <div class="container">
             <div class="row justify-content-between">
-            <button class="col-xs-12 col-sm-4" id="generateBtn">Generate password</button>
-            <button class="col-xs-12 col-sm-4" id="copyBtn">Copy to Clipboard</button>
+            <button onclick = "generate" class="col-xs-12 col-sm-4" id="generateBtn">Generate password</button>
+            <button onclick ="" class="col-xs-12 col-sm-4" id="copyBtn">Copy to Clipboard</button>
             </div>
         </div>  
     </div>
-
+    <script src="js/script.js"></script>
 
   </body>
 </html>
