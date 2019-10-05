@@ -4,7 +4,8 @@ function generate(){
     var values = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
     var password;
     for (var i=0;i<charNum.length;i++){
-        password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+        password = password + values.charAt(Math.floor(Math.random() * values.length));
+        //password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
     }
     document.getElementById("display").value = password;
 }
