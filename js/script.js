@@ -1,16 +1,41 @@
-alert("Time to create a password!");
-var charNum = prompt("How many characters do you want? (8-128)");
+var numberString = "0123456789";
+var lowerString = "abcdefghijklmnopqrstuvwxyz";
+var upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var specialString = "!#$%&()*+,-./:;<=>?@[\]^_`{|}'~";
+var password = "";
+var random = "";
+var result = document.getElementById("password");
+
 function generate(){
-    var values = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-    var password;
-    for (var i=0;i<charNum.length;i++){
-        password = password + values.charAt(Math.floor(Math.random() * values.length));
-        //password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+    var totalNum = prompt("How many characters do you want? (8-128)");
+    var numChar = confirm("Do you want numeric characters?");
+    var lowerChar = confirm("Do you want lower characters?");
+    var upperChar = confirm("Do you want upper characters?");
+    var specialChar = confirm("Do you want special characters?");
+
+    if (numChar === true) {
+        password=password + numberString;
     }
-    document.getElementById("display").value = password;
+    if (lowerChar === true) {
+        password=password + lowerString;
+    }
+    if (upperChar === true) {
+        password=password + upperString;
+    }
+    if (specialChar === true) {
+        password=password + specialString;
+    }
+    for (var i=0;i<totalNum;i++){
+        random += password.charAt(Math.floor(Math.random() * password.length));
+        }
+        console.log(random);
+        result.textContent = random;
 }
 function copyPassword(){
-    document.getElementById("display").querySelector();
-        document.execCommand("copy");
-        alert("Password copied to clipboard!");
+    var copyText = document.getElementById("password");
+        
+        copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the password " + copyText.value + "!");
 }
